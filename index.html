@@ -28,7 +28,7 @@
 <body>
 <main>
   <h1>Falaq Privacy Policy</h1>
-  <p class="meta">Effective October 23, 2026</p>
+  <p class="meta">Effective October 28, 2026</p>
 
   <div class="summary">
     <strong>The short version</strong>
@@ -54,8 +54,14 @@
   <p>Quran text, translations, Tajweed and recitation audio use <a href="https://quran.foundation/">Quran Foundation</a> resources. When you open content that is not already saved on your phone, the app asks Falaq's server for it, and our server fetches the requested resource. Requests include the surah, verse, translation or reciter needed to deliver that content. Our server receives your connection's IP address. Quran Foundation receives the server connection for proxied requests; audio and other content hosts receive your connection directly where the app requests their files. Hosting and provider logs may retain request information under their own privacy policies. We do not promise that third-party requests leave no logs or that all providers use the same retention period.</p>
   <p>Content you download for offline use is stored on your phone.</p>
 
+  <h2>Hosted services and private test access</h2>
+  <p>Falaq's Quran and masjid backend is hosted on Netlify at <a href="https://falaq-services-nafi.netlify.app">falaq-services-nafi.netlify.app</a>. Netlify processes connection information and requests needed to deliver and protect this service, including IP addresses and requested routes. Requests can include selected nearby coordinates, search text, masjid IDs and Quran resource references. Hosting and provider logs may retain this information. We have not established a single retention period across these operators; see <a href="https://www.netlify.com/privacy/">Netlify's Privacy Statement</a>. The backend does not upload your personal worship records or run app analytics.</p>
+  <p>Private test builds ask for an access code to connect online services. The code is sent over HTTPS for verification and is not saved by the app. The server returns a signed access session that expires after 30 days. The iPhone stores that session in its device-only Keychain, without requiring Face ID; the session is not included in Falaq's personal backup files. Browser previews keep the session in memory. A session is used only with the configured Falaq backend and is not sent to audio or other content hosts. This is service access, not a personal profile or cloud account.</p>
+  <p>You can disconnect Online services in Settings to remove the saved connection on that device. Expired sessions require reconnection. iOS may preserve Keychain items after an app is removed, so disconnect before removal if you want to clear the stored service session. Offline content and personal prayer records do not require this online connection.</p>
+
   <h2>Masjid services</h2>
   <p>Masjid directory queries, selected coordinates and requested masjid schedules pass through Falaq's server to Masjidal, Prayers Connect or the legacy My-Masjid service as applicable. The server caches public listings, schedules and nearby results. Nearby cache entries are derived from search coordinates. Prayers Connect uses a server-side guest session; Falaq does not send your personal worship records with these requests. Provider links, map links and public images may contact their respective hosts. These operators may retain requests or technical logs under their own privacy policies.</p>
+  <p>The hosted backend keeps provider caches in its function's temporary storage and memory. Cache freshness checks decide when to request updated results; they do not guarantee deletion at that time. Temporary files can remain while a hosting instance is reused. We do not promise a fixed deletion time for platform storage or logs.</p>
 
   <h2>Notifications</h2>
   <p>Prayer and other reminders are scheduled on your phone. No push service or notification token is used, and nothing about your reminders is sent to us.</p>
@@ -73,7 +79,7 @@
   <p>Falaq has no accounts, advertising or tracking features directed at children. Online requests can still send location, search text and connection information as described above. A city can be selected manually and bundled content can be used offline. Parents and guardians can manage location and notification permissions in the phone's Settings.</p>
 
   <h2>Your choices</h2>
-  <p>You can turn off location access, notifications or both at any time in your phone's Settings. You can delete everything Falaq has saved by deleting the app.</p>
+  <p>You can turn off location access, notifications or both at any time in your phone's Settings. Deleting the app removes its local content and personal records; exported backups remain where you saved them. Use Disconnect Online services to remove the saved Keychain session before uninstalling.</p>
 
   <h2>Changes to this policy</h2>
   <p>If Falaq starts handling information differently, for example by adding crash reporting or a feedback form, we will update this page and the date at the top before the change reaches the app.</p>
